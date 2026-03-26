@@ -1,6 +1,6 @@
 ---
 - name: Check both servers
-  hosts: servers
+  hosts: all
   gather_facts: no
 
   tasks:
