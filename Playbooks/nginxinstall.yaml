@@ -1,16 +1,15 @@
----
-- hosts: all
-  tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
+- name: Install nginx on both servers
+  hosts: all
+  become: yes
+  gather_facts: yes
 
-    - name: Install Nginx package
-      apt:
+  tasks:
+    - name: Install nginx
+      package:
         name: nginx
         state: present
 
-    - name: Start and enable Nginx service
+    - name: Start nginx
       service:
         name: nginx
         state: started
