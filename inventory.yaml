@@ -1,7 +1,4 @@
----
-all:
-  hosts:
-    ubuntu-host:
-      ansible_host: 18.234.104.7
-    centos-host:
-      ansible_host: 3.87.1.144
+[app]
+18.234.104.7
+[db]
+3.87.1.144
