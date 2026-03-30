@@ -1,0 +1,6 @@
+---
+- name: Testing windows connection
+  hosts: windows
+  task:
+    - name: ping windows server
+      ansible.builtin.ping:
