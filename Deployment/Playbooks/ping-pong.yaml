@@ -1,6 +1,8 @@
 ---
 - name: Testing windows connection
   hosts: windows
+  gather_facts: no
+
   tasks:
     - name: ping windows server
       win_ping:
